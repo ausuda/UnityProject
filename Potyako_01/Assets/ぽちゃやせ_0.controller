@@ -26,7 +26,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: pocha_sample
-  m_Speed: 1
+  m_Speed: .0700000003
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: a6ea7bce2a99fd24e883e95f7a386a5f, type: 2}
