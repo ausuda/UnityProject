@@ -8,8 +8,6 @@ public class TestText : MonoBehaviour {
 	private float time = 0;
 	private int len = 0;
 
-	public GUIStyle fpsStyle;
-
 	// Use this for initialization
 	void Start () {
 	
@@ -32,6 +30,6 @@ public class TestText : MonoBehaviour {
 	void OnGUI()
 	{
 		Rect rect1 = new Rect(Screen.width / 30, Screen.height * 2/ 3, Screen.width * 28 / 30, Screen.height  / 3);
-		GUI.Box(rect1, d,fpsStyle);
+		GUI.TextArea(rect1, d);
 	}
 }

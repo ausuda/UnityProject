@@ -49,10 +49,18 @@
      <Compile Include="Assets\Audio.cs" />
      <Compile Include="Assets\EasyFadeIn.cs" />
      <Compile Include="Assets\Fade.cs" />
+     <Compile Include="Assets\FirstText.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\Scene1_1.cs" />
+     <Compile Include="Assets\Scene2_1.cs" />
+     <Compile Include="Assets\Scene2_2.cs" />
+     <Compile Include="Assets\Scene2_3.cs" />
+     <Compile Include="Assets\Scene2_4.cs" />
      <Compile Include="Assets\SpriteScript.cs" />
      <Compile Include="Assets\StartButton.cs" />
+     <Compile Include="Assets\StartCount.cs" />
      <Compile Include="Assets\TestText.cs" />
+     <Compile Include="Assets\TransScene3From2.cs" />
      <Compile Include="Assets\Walker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

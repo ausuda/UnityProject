@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Walker : MonoBehaviour {
 
-	private int walkCount = 0;
+	static int walkCount;
+	private static bool scene11Flag = true;
 	private float prePosX = 0;
 	private float prePosY = 0;
 	private float prePosZ = 0;
@@ -12,12 +13,30 @@ public class Walker : MonoBehaviour {
 	private float posZ = 0;
 	float time = 0;
 
+
+	SpriteRenderer sprender;
+
+	//public Sprite NormalPocha;
+	//public Sprite MidPocha;
+	//static Component sprite;
+	static GameObject NormalPocha;
+	static GameObject MidPocha;
+
 	private GUIStyle style;
 	// Use this for initialization
 	void Start () {
 		style = new GUIStyle();
 		style.fontSize = 30;
 		style.normal.textColor = Color.black;
+		sprender = gameObject.GetComponent<SpriteRenderer> ();
+		NormalPocha = GameObject.Find ("ぽちゃやせ_0");
+		MidPocha = GameObject.Find ("ポチャ子中_0");
+		NormalPocha.SetActive (true);
+		MidPocha.SetActive (false);
+		if (walkCount > 10) {
+			NormalPocha.SetActive (false);
+			MidPocha.SetActive (true);
+		}
 	}
 	
 	// Update is called once per frame
@@ -42,10 +61,21 @@ public class Walker : MonoBehaviour {
 						}
 			time = 0;
 				}
+
 	}
 
 	void OnGUI(){
 				string w = walkCount.ToString();
 				GUI.Label (new Rect (0, 0, 120, 50), w, style);
+
+		if (walkCount > 10 && scene11Flag) {
+						Application.LoadLevel ("Scene1-1");
+			scene11Flag = false;
+
+				}
 		}
+
+//	void ChangeToMid(){
+//				sprender.sprite = MidPocha;
+//		}
 }
